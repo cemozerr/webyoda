@@ -4,7 +4,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
     function doIt(string) {
-      var replaced = string.replace(/ /g, '+');;
+      var replaced = string.replace(/ /g, '+');
       var output = $.ajax({
         url: "https://yoda.p.mashape.com/yoda?sentence=" + replaced, // The URL to the API. 
         type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
