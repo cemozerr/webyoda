@@ -4,9 +4,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
     function doIt(string) {
-      var replaced = string.split(' ').join('+');
+      var replaced = str.replace(/ /g, '+');;
       var output = $.ajax({
-        url: "https://yoda.p.mashape.com/yoda?sentence=" + answer , // The URL to the API. 
+        url: "https://yoda.p.mashape.com/yoda?sentence=" + replaced, // The URL to the API. 
         type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
         dataType: 'text',
         success: function(data) {
