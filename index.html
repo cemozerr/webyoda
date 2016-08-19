@@ -10,15 +10,7 @@
         url: "https://yoda.p.mashape.com/yoda?sentence=" + replaced, // The URL to the API. 
         type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
         dataType: 'text',
-        success: function(data) {
-          var x = typeof data;
-          alert(x);
-    	//
-        //Change data.source to data.something , where something is whichever part of the object you want returned.
-        //To see the whole object you can output it to your browser console using:
-        document.getElementById("output").innerHTML = data; 
-        },
-        error: function(err) { alert(err);},
+        success: function(data) {document.getElementById("output").innerHTML = data; },
         beforeSend: function(xhr) {
           xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
           xhr.setRequestHeader("Accept", "text/plain");// Enter here your Mashape key
