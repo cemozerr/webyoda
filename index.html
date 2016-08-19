@@ -16,7 +16,7 @@
         console.log(data);
         document.getElementById("output").innerHTML = data.source; 
         },
-        error: function(err) { alert(err); },
+        error: function(err) { alert(err); alert('yoooo')},
         beforeSend: function(xhr) {
           xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
           xhr.setRequestHeader("Accept", "text/plain");// Enter here your Mashape key
