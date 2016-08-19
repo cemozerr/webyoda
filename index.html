@@ -3,9 +3,8 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-    function doIt(string) {
-      console.log(string)
-      string = string.innerHTML
+    function doIt() {
+      string = $("#test").val()
       var replaced = string.replace(/ /g, '+');
       var output = $.ajax({
         url: "https://yoda.p.mashape.com/yoda?sentence=" + replaced, // The URL to the API. 
@@ -29,8 +28,8 @@
   <body>
     <form>
       Speak to Yoda:<br>
-      <input type="text" name="answer">
-      <input type="button" id="test" value="shout" onclick="doIt(answer);" >
+      <input type="text" id="test" name="answer">
+      <input type="button" value="shout" onclick="doIt();" >
       <div id="output">The API request is:</div>
     </form>
   </body>
