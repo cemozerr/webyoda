@@ -5,6 +5,10 @@
     <script>
     function doIt() {
       string = $("#test").val()
+      if (string == ''){
+        alert("YOU CANT JUST SHOUT NOTHING, YOU COWARD");
+        return;
+      }
       var replaced = string.replace(/ /g, '+');
       var output = $.ajax({
         url: "https://yoda.p.mashape.com/yoda?sentence=" + replaced, // The URL to the API. 
