@@ -4,13 +4,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
     $(document).ready(function(){
-      $("#test").hover(function(){
-        alert("Are you sure son?");
-      },
-      function(){
-        alert("You little coward!");
-      });
-    });
+      $("#test").on({
+        mouseenter: function()
+        {
+          alert("Are you sure son?");
+          $(this).hide()
+        }})});
     </script>
   </head>
   <body>
