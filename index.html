@@ -9,7 +9,12 @@
         {
           //alert("Are you sure son?");
           $(this).hide()
-        }})});
+        }
+        mouseleave: function()
+        {
+          $(this).show()
+        }
+      })});
       $("input").focus(function(){
         $(this).css("background-color", "#cccccc");
       });
