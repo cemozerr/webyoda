@@ -5,10 +5,10 @@
     <script>
     $(document).ready(function(){
       $("#test").hover(function(){
-        $(this).hide();
+        $(this).hide(slow);
       },
       function(){
-        $(this).show();
+        $(this).show(slow);
         
       });});
       $("input").focus(function(){
