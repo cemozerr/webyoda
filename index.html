@@ -3,8 +3,8 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-    function doIt(answer) {
-      var replaced = answer.split(' ').join('+');
+    function doIt(string) {
+      var replaced = string.split(' ').join('+');
       var output = $.ajax({
         url: "https://yoda.p.mashape.com/yoda?sentence=" + answer , // The URL to the API. 
         type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
