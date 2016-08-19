@@ -18,7 +18,8 @@
         },
         error: function(err) { alert(err); },
         beforeSend: function(xhr) {
-          xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE"); // Enter here your Mashape key
+          xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
+          xhr.setRequestHeader("Accept", "text/plain");// Enter here your Mashape key
           }});}
     $(document).ready(function(){});
     </script>
@@ -28,7 +29,7 @@
       Speak to Yoda:<br>
       <input type="text" name="answer">
       <input type="button" id="test" value="shout" onclick="doIt();" >
-      <p id="output"></p>
+      <div id="output">The API request is:</div>
     </form>
   </body>
 </html>
