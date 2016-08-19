@@ -5,10 +5,10 @@
     <script>
     $(document).ready(function(){
       $("#test").hover(function(){
-        alert("You entered p1!");
+        $(this).toggle;
       },
       function(){
-        alert("Bye! You now leave p1!");
+        $(this).toggle;
         
       });});
       $("input").focus(function(){
