@@ -3,6 +3,9 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
+    $(document).ready(function(){
+      $('img').hide().show("slow")
+      )};
     function doIt() {
       string = $("#test").val()
       if (string == ''){
@@ -28,7 +31,7 @@
       Speak to Yoda:<br>
       <input type="text" id="test" name="answer">
       <input type="button" value="shout" onclick="doIt();" >
-      <div id="output">The API request is:</div>
+      <div id="output"></div>
     </form>
     </div>
   </body>
