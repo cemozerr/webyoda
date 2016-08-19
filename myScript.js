@@ -14,4 +14,6 @@
           xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
           xhr.setRequestHeader("Accept", "text/plain");// Enter here your Mashape key
           }});}
-$(".button").click(doIt());
+$(".button").click(function(){
+ doIt();
+};
