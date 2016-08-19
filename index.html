@@ -1,12 +1,23 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+    <script>
+      function httpGetAsync(theUrl, callback){
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() { 
+          if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+          callback(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", theUrl, true); // true for asynchronous
+        xmlHttp.send(null);
+      }
+    </script>
   </head>
   <body>
     <form>
       Speak to Yoda:<br>
       <input type="text" name="answer">
-      <input type="submit" value="shout">
+      <input type="button" onclick="httpGetAsync(https://yoda.p.mashape.com/yoda?sentence=You+will+learn+how+to+speak+like+me+someday.++Oh+wait.)" value="shout" >
     </form>
   </body>
 </html>
