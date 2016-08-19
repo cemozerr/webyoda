@@ -4,8 +4,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
     function doIt(string) {
-      var y = typeof string;
-      alert(y); 
+      console.log(string)
+      string = string.innerHTML
       var replaced = string.replace(/ /g, '+');
       var output = $.ajax({
         url: "https://yoda.p.mashape.com/yoda?sentence=" + replaced, // The URL to the API. 
