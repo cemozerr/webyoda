@@ -16,4 +16,4 @@
        }});}
 $(".button").click(function(){
   doIt();
-};
+});
