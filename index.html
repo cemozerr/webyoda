@@ -28,16 +28,13 @@
         $(this).show("slow");
         
       });});
-      $("input").focus(function(){
-        $(this).css("background-color", "#cccccc");
-      });
     </script>
   </head>
   <body>
     <form>
       Speak to Yoda:<br>
       <input type="text" name="answer">
-      <input type="button" id="test" value="shout" >
+      <input type="button" id="test" value="shout" action="doIt()" >
       <p id="output"></p>
     </form>
   </body>
