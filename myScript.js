@@ -1,6 +1,6 @@
 $(function() {
   //your code...
- function doIt() {
+ function doIt(callback) {
    var string = $(".input").val();
    if (string == ''){
      alert("YOU CANT JUST SHOUT NOTHING, YOU COWARD");
@@ -14,7 +14,7 @@ $(function() {
      success: function(data) {
        var xz = '' + data;
        var array = xz.split('.');
-       return array;
+       callback(array);
        
      },
      beforeSend: function(xhr) {
@@ -23,12 +23,12 @@ $(function() {
        }
    });
  }
-function type(){
+function type(text){
   $("#output").typed({
-    strings:doIt(),
+    strings:text,
     typespeed:0
 })}
 $(".button").click(function(){
-  type();
+  doIt();
 });
 });
