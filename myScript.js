@@ -13,7 +13,7 @@ $(function() {
      dataType: 'text',
      success: function(data) {
        return data
-     };
+     }
      beforeSend: function(xhr) {
        xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
        xhr.setRequestHeader("Accept", "text/plain");// Enter here your Mashape key
