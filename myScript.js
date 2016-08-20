@@ -25,7 +25,9 @@ function doIt(callback) {
    });
  }
 function type(text){
-  $("#output").typed({
+  $("#output")
+  .data('typed', null)
+  .typed({
     strings:text,
     typespeed:0
 })}
