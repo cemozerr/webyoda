@@ -1,7 +1,7 @@
 $(function() {
   //your code...
  function doIt() {
-   var string = $("#test").val();
+   var string = $(".input").val();
    var xz = typeof string;
    alert(xz)
    if (string == ''){
