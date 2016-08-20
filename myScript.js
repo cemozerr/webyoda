@@ -28,7 +28,7 @@ function type(text){
     strings:text,
     typespeed:0
 })}
-$(".button").click(function(){
+$(".button").live('click', function(){ 
   doIt(type);
 });
 });
