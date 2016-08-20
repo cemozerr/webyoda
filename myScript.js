@@ -1,7 +1,7 @@
 $(function() {
   //your code...
  function doIt() {
-   string = $("#test").val()
+   string = $("#test").val();
    if (string == ''){
      alert("YOU CANT JUST SHOUT NOTHING, YOU COWARD");
      return;
