@@ -13,8 +13,8 @@ $(function() {
      dataType: 'text',
      success: function(data) {
        $("#output").typed({
-         typespeed:0
          strings:data
+         typespeed:0
        }); },
      beforeSend: function(xhr) {
        xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
