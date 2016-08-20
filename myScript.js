@@ -1,6 +1,6 @@
 $(function() {
   //your code...
- function doIt(callback) {
+ function doIt() {
    var string = $(".input").val();
    if (string == ''){
      alert("YOU CANT JUST SHOUT NOTHING, YOU COWARD");
@@ -14,7 +14,8 @@ $(function() {
      success: function(data) {
        var xz = '' + data;
        var array = xz.split('.');
-       callback(array);
+       return array;
+       
      },
      beforeSend: function(xhr) {
        xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
@@ -22,13 +23,12 @@ $(function() {
        }
    });
  }
-function type(array){
+function type(){
   $("#output").typed({
-    strings:array,
+    strings:doIt(),
     typespeed:0
 })}
 $(".button").click(function(){
-  doIt(function(){
-    type();});
+  type();
 });
 });
