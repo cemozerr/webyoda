@@ -1,6 +1,4 @@
-$(function() {
-  //your code...
- function doIt(callback) {
+function doIt(callback) {
    var string = $(".input").val();
    if (string == ''){
      alert("YOU CANT JUST SHOUT NOTHING, YOU COWARD");
@@ -28,7 +26,6 @@ function type(text){
     strings:text,
     typespeed:0
 })}
-$(document).delegate('.option', 'click', function(){
+$(document).delegate('.button', 'click', function(){
   doIt(type);
-});
 });
