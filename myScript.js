@@ -14,7 +14,7 @@ $(function() {
      success: function(data) {
        $("#output").typed({
          typespeed:0
-         strings: [data]
+         strings:data
        }); },
      beforeSend: function(xhr) {
        xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
