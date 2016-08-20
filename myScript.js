@@ -12,7 +12,7 @@ $(function() {
      type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
      dataType: 'text',
      success: function(data) {
-       return String(data)
+       return String(data);
      },
      beforeSend: function(xhr) {
        xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
@@ -20,7 +20,7 @@ $(function() {
        }});}
 $(".button").click(function(){
   var text = doIt();
-  var xz = typeof text
+  var xz = '' + text;
   console.log(text)
   alert(xz)
   $("#output").typed({
