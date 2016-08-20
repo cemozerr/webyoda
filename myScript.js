@@ -11,7 +11,7 @@ function doIt(callback) {
      dataType: 'text',
      success: function(data) {
        var xz = '' + data;
-       var array = xz.split('.');
+       var array = xz.split('');
        callback(array);
        
      },
