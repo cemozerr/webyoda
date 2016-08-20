@@ -12,7 +12,7 @@ $(function() {
      type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
      dataType: 'text',
      success: function(data) {
-       return data
+       return String(data)
      },
      beforeSend: function(xhr) {
        xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
