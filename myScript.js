@@ -28,7 +28,7 @@ function type(text){
     strings:text,
     typespeed:0
 })}
-$(".button").live('click', function(){ 
+$(document).delegate('.option', 'click', function(){
   doIt(type);
 });
 });
