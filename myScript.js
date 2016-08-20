@@ -12,7 +12,9 @@ function doIt(callback) {
      success: function(data) {
        alert(data)
        var xz = '' + data;
+       alert(xz)
        var array = xz.split('.');
+       alert(array)
        callback(array);
        
      },
