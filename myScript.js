@@ -12,15 +12,16 @@ $(function() {
      type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
      dataType: 'text',
      success: function(data) {
-       $("#output").typed({
-         strings:data,
-         typespeed:0
-       }); },
+       return data;
+     };
      beforeSend: function(xhr) {
        xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
        xhr.setRequestHeader("Accept", "text/plain");// Enter here your Mashape key
        }});}
 $(".button").click(function(){
-  doIt();
+  $("#output").typed({
+         strings:data,
+         typespeed:0
+});
 });
 });
