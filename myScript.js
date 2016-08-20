@@ -11,7 +11,11 @@ $(function() {
      url: "https://yoda.p.mashape.com/yoda?sentence=" + replaced, // The URL to the API. 
      type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
      dataType: 'text',
-     success: function(data) {document.getElementById("output").innerHTML = data; },
+     success: function(data) {
+       $("#output").typed({
+         typespeed:0
+         strings: [data]
+       }); },
      beforeSend: function(xhr) {
        xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
        xhr.setRequestHeader("Accept", "text/plain");// Enter here your Mashape key
@@ -19,7 +23,4 @@ $(function() {
 $(".button").click(function(){
   doIt();
 });
-$("#output").typed({
-  typespeed:0
-})
 });
