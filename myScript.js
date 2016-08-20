@@ -18,6 +18,4 @@ $(function() {
        }});}
 $(".button").click(function(){
   doIt();
-});
-$("#test").hide()
-});
+});});
