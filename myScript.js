@@ -23,9 +23,9 @@ $(function() {
 $(".button").click(function(){
   var text = doIt();
   var xz = '' + text;
-  alert(typeof xz)
+  var array = xz.split('.');
   $("#output").typed({
-         strings:['yodas anwer uouwkeirnair'],
+         strings:array,
          typespeed:0
 });
 });
