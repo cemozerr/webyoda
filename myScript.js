@@ -14,14 +14,13 @@ $(function() {
      success: function(data) {
        var xz = '' + data;
        var array = xz.split('.');
-       return array;
+       type(array);
      },
      beforeSend: function(xhr) {
        xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
        xhr.setRequestHeader("Accept", "text/plain");// Enter here your Mashape key
        }
    });
-   type(array);
  }
 function type(array){
   $("#output").typed({
