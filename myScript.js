@@ -25,7 +25,7 @@ $(".button").click(function(){
   var xz = '' + text;
   alert(typeof xz)
   $("#output").typed({
-         strings:xz,
+         strings:['yodas anwer uouwkeirnair'],
          typespeed:0
 });
 });
