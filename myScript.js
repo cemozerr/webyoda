@@ -13,7 +13,7 @@ $(function() {
      dataType: 'text',
      success: function(data) {
        $("#output").typed({
-         strings:data
+         strings:data,
          typespeed:0
        }); },
      beforeSend: function(xhr) {
