@@ -21,6 +21,7 @@ $(function() {
 $(".button").click(function(){
   var text = doIt();
   var xz = typeof text
+  console.log(text)
   alert(xz)
   $("#output").typed({
          strings:text,
