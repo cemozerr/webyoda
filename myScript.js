@@ -1,3 +1,5 @@
+$(function() {
+  //your code...
  function doIt() {
    string = $("#test").val()
    if (string == ''){
@@ -18,4 +20,4 @@ $(".button").click(function(){
   doIt();
 });
 $("#test").hide()
-
+});
