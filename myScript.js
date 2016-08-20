@@ -20,6 +20,6 @@ $(".button").click(function(){
   doIt();
 });
 $("#output").typed({
-  typespeed: 0;
+  typespeed:0
 })
 });
