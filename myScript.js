@@ -27,8 +27,7 @@ function type(array){
   $("#output").typed({
     strings:array,
     typespeed:0
-  )}
-}
+})}
 $(".button").click(function(){
   doIt(function(){
     type();});
