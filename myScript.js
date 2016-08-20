@@ -29,6 +29,6 @@ function type(text){
     typespeed:0
 })}
 $(".button").click(function(){
-  doIt(type());
+  doIt(type(text));
 });
 });
