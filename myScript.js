@@ -1,6 +1,6 @@
 $(function() {
   //your code...
- function doIt(type) {
+ function doIt(callback) {
    var string = $(".input").val();
    if (string == ''){
      alert("YOU CANT JUST SHOUT NOTHING, YOU COWARD");
@@ -14,7 +14,7 @@ $(function() {
      success: function(data) {
        var xz = '' + data;
        var array = xz.split('.');
-       type(array);
+       callback(array);
      },
      beforeSend: function(xhr) {
        xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
