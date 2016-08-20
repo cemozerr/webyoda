@@ -12,6 +12,7 @@ $(function() {
      type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
      dataType: 'text',
      success: function(data) {
+       alert(data)
        return data;
      },
      beforeSend: function(xhr) {
