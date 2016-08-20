@@ -2,8 +2,6 @@ $(function() {
   //your code...
  function doIt() {
    var string = $(".input").val();
-   var xz = typeof string;
-   alert(xz)
    if (string == ''){
      alert("YOU CANT JUST SHOUT NOTHING, YOU COWARD");
      return;
