@@ -1,6 +1,6 @@
 $(function() {
   //your code...
- function doIt() {
+ function doIt(type) {
    var string = $(".input").val();
    if (string == ''){
      alert("YOU CANT JUST SHOUT NOTHING, YOU COWARD");
@@ -12,22 +12,25 @@ $(function() {
      type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
      dataType: 'text',
      success: function(data) {
-       alert(data)
-       return data;
+       var xz = '' + data;
+       var array = xz.split('.');
+       return array;
      },
      beforeSend: function(xhr) {
        xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
        xhr.setRequestHeader("Accept", "text/plain");// Enter here your Mashape key
        }
    });
+   type(array);
  }
-$(".button").click(function(){
-  var text = doIt();
-  var xz = '' + text;
-  var array = xz.split('.');
+function type(array){
   $("#output").typed({
-         strings:array,
-         typespeed:0
-});
+    strings:array,
+    typespeed:0
+  )}
+}
+$(".button").click(function(){
+  doIt(function(){
+    type();});
 });
 });
