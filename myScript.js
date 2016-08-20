@@ -20,6 +20,8 @@ $(function() {
        }});}
 $(".button").click(function(){
   var text = doIt();
+  var xz = typeof text
+  alert(xz)
   $("#output").typed({
          strings:text,
          typespeed:0
