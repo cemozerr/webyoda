@@ -12,7 +12,7 @@ function askQuestion(){
      dataType: 'json',
      success: function(data) {
       var obj = JSON.parse(data)
-      var reply = data[0].answer;
+      var reply = obj.answer;
       alert(reply);
       alert(typeof reply);
       yodaIt(reply);
