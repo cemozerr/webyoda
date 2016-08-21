@@ -10,9 +10,10 @@ function doIt(callback) {
      type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
      dataType: 'text',
      success: function(data) {
+       var myArray = []
        var xz = '' + data;
-       var array = xz.split('');
-       callback(array);
+       myArray.push(xz)
+       callback(myArray);
        
      },
      beforeSend: function(xhr) {
