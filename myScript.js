@@ -1,12 +1,32 @@
-function doIt(callback) {
-   var string = $(".input").val();
-   if (string == ''){
+
+function askQuestion(callback){
+   var inputText = $(".input").val();
+   if (inputText == ''){
      alert("YOU CANT JUST SHOUT NOTHING, YOU COWARD");
      return;
    }
-   var replaced = string.replace(/ /g, '+');
-   var output = $.ajax({
-     url: "https://yoda.p.mashape.com/yoda?sentence=" + replaced, // The URL to the API. 
+   var replaced = inputText.replace(/ /g, '+');
+   var firstOutput = $.ajax({
+     url: "https://webknox-question-answering.p.mashape.com/questions/answers?answerLookup=false&answerSearch=false&question=" + replaced, // The URL to the API. 
+     type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
+     dataType: 'json',
+     success: function(data) {
+      var reply = data[0].answer;
+      alert(reply);
+      alert(typeof reply);
+      callback(reply);
+     },
+     beforeSend: function(xhr) {
+       xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
+       xhr.setRequestHeader("Accept", "application/json");// Enter here your Mashape key
+       }
+   });
+   
+}
+function yodaIt(string, callback) {
+   var replaced2 = string.replace(/ /g, '+');
+   var secondOutput = $.ajax({
+     url: "https://yoda.p.mashape.com/yoda?sentence=" + replaced2, // The URL to the API. 
      type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
      dataType: 'text',
      success: function(data) {
@@ -30,5 +50,7 @@ function type(text){
     typespeed:0
 })}
 $(document).delegate('.button', 'click', function(){
-  doIt(type);
+  askQuestion(function(){
+     yodaIt(function(){
+        type()});
 });
