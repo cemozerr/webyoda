@@ -11,8 +11,7 @@ function askQuestion(){
      type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
      dataType: 'json',
      success: function(data) {
-      var obj = JSON.parse(data)
-      var reply = obj.answer;
+      var reply = data.answer;
       alert(reply);
       alert(typeof reply);
       yodaIt(reply);
