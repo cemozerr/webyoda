@@ -1,5 +1,5 @@
 
-function askQuestion(callback){
+function askQuestion(){
    var inputText = $(".input").val();
    if (inputText == ''){
      alert("YOU CANT JUST SHOUT NOTHING, YOU COWARD");
@@ -14,7 +14,7 @@ function askQuestion(callback){
       var reply = data[0].answer;
       alert(reply);
       alert(typeof reply);
-      callback(reply);
+      yodaIt(reply);
      },
      beforeSend: function(xhr) {
        xhr.setRequestHeader("X-Mashape-Authorization", "yUyYx3ozJVmshXYVYcfln7FYGOHHp1wzb7xjsnopzf0dvjkBzE");
@@ -23,7 +23,7 @@ function askQuestion(callback){
    });
    
 }
-function yodaIt(string, callback) {
+function yodaIt(string) {
    var replaced2 = string.replace(/ /g, '+');
    var secondOutput = $.ajax({
      url: "https://yoda.p.mashape.com/yoda?sentence=" + replaced2, // The URL to the API. 
@@ -33,7 +33,7 @@ function yodaIt(string, callback) {
        var myArray = []
        var xz = '' + data;
        myArray.push(xz)
-       callback(myArray);
+       type(myArray);
        
      },
      beforeSend: function(xhr) {
@@ -50,7 +50,5 @@ function type(text){
     typespeed:0
 })}
 $(document).delegate('.button', 'click', function(){
-  askQuestion(function(){
-     yodaIt(function(){
-        type()});
+  askQuestion();
 });
