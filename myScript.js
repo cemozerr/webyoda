@@ -12,8 +12,6 @@ function askQuestion(){
      dataType: 'json',
      success: function(data) {
       var reply = data.answer;
-      alert(reply);
-      alert(typeof reply);
       yodaIt(reply);
      },
      beforeSend: function(xhr) {
