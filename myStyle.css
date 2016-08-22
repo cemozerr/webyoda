@@ -14,31 +14,10 @@ h1{
 input.button{
     height:50px;
 }
-#typed-strings, #typed{
+#output{
     color: lime; 
     font-family: "Courier";
     font-size: 20px;
     margin: 10px 0 0 10px;
     width: 30em;
-}
-.typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-}
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
 }
