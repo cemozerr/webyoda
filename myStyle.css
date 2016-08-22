@@ -14,7 +14,7 @@ h1{
 input.button{
     height:50px;
 }
-#output{
+#typed-strings, #typed{
     color: lime; 
     font-family: "Courier";
     font-size: 20px;
