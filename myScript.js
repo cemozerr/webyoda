@@ -1,4 +1,3 @@
-
 function askQuestion(){
    var inputText = $(".input").val();
    if (inputText == ''){
@@ -28,11 +27,10 @@ function yodaIt(string) {
      type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
      dataType: 'text',
      success: function(data) {
-       //var myArray = []
+       var myArray = []
        var xz = '' + data;
-       document.getElementById("locateText").innerHTML = xz;
-      //  myArray.push(xz)
-      //  type(myArray);
+       myArray.push(xz)
+       type(myArray);
        
      },
      beforeSend: function(xhr) {
@@ -41,20 +39,13 @@ function yodaIt(string) {
        }
    });
  }
-// function type(text){
-//  $("#output")
-//  .data('typed', null)
-//  .typed({
-//     strings:text,
-//     typespeed:0
-// })}
+function type(text){
+  $("#output")
+  .data('typed', null)
+  .typed({
+    strings:text,
+    typespeed:0
+})}
 $(document).delegate('.button', 'click', function(){
   askQuestion();
 });
-$(function(){
-        $("#typed")
-        .data('typed', null)
-        .typed({
-            stringsElement: $('#typed-strings')
-        });
-    });
